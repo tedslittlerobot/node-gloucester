@@ -1,6 +1,6 @@
 {
   "name": "gloucester",
-  "version": "0.2.7",
+  "version": "0.1.0",
   "description": "A verbosity detection library.",
   "repository": {
     "type": "git",
