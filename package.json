@@ -1,0 +1,47 @@
+{
+  "name": "gloucester",
+  "version": "0.2.7",
+  "description": "A verbosity detection library.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tedslittlerobot/node-gloucester.git"
+  },
+  "keywords": [
+    "node",
+    "cli",
+    "verbosity",
+    "verbose"
+  ],
+  "author": "Stefan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tedslittlerobot/node-gloucester/issues"
+  },
+  "homepage": "https://github.com/tedslittlerobot/node-gloucester#readme",
+  "scripts": {
+    "clean": "rm -rf build bin dist lib",
+    "build": "npm run clean && tsc && ts-rel src lib",
+    "test": "npm run clean && npm run build && ava",
+    "lint": "xo",
+    "lint:fix": "xo --fix",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "devDependencies": {
+    "@tedslittlerobot/ts-relativity": "^1.0.2",
+    "@types/node": "^20.12.13",
+    "ava": "^6.1.3",
+		"commander": "^12.1.0",
+    "typescript": "^5.4.5",
+    "xo": "^0.58.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module",
+  "module": "lib/index.js",
+  "main": "lib/index.js",
+	"exports": {
+		".": "./lib/index.js",
+		"./commander": "./lib/commander.js"
+	}
+}
