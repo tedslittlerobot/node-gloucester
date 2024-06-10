@@ -1,6 +1,6 @@
 {
   "name": "gloucester",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A verbosity detection library.",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "@tedslittlerobot/ts-relativity": "^1.0.2",
     "@types/node": "^20.12.13",
     "ava": "^6.1.3",
-		"commander": "^12.1.0",
+    "commander": "^12.1.0",
     "typescript": "^5.4.5",
     "xo": "^0.58.0"
   },
@@ -40,8 +40,8 @@
   "type": "module",
   "module": "lib/index.js",
   "main": "lib/index.js",
-	"exports": {
-		".": "./lib/index.js",
-		"./commander": "./lib/commander.js"
-	}
+  "exports": {
+    ".": "./lib/index.js",
+    "./commander": "./lib/commander.js"
+  }
 }
