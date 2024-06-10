@@ -1,5 +1,5 @@
 import {type Command} from 'commander';
-import type VerbosityEvaluator from './evaluator.class.js';
+import type VerbosityEvaluator from '../evaluator.class.js';
 
 export default function setupCommanderAndGloucester(program: Command, gloucester: VerbosityEvaluator) {
 	gloucester.setVerbosityFromEnvironmentVariable({prefix: program.name()});

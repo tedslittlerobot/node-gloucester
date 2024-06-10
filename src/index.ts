@@ -1,4 +1,8 @@
+import VerbosityEvaluator from './evaluator.class.js';
+
+const gloucester = new VerbosityEvaluator('normal');
 
 export * from './types.js';
-export {default as VerbosityEvaluator} from './evaluator.class.js';
-export {default as gloucester} from './instance.js';
+// eslint-disable-next-line unicorn/prefer-export-from
+export {VerbosityEvaluator};
+export default gloucester;
