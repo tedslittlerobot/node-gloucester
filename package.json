@@ -42,6 +42,6 @@
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js",
-    "./commander": "./lib/commander.js"
+    "./lib/commander": "./lib/commander.js"
   }
 }
