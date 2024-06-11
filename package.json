@@ -1,6 +1,6 @@
 {
   "name": "gloucester",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "A verbosity detection and comparison library with integration with Commander JS.",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   "keywords": [
     "node",
     "cli",
-		"commander",
+    "commander",
     "verbosity",
     "verbose"
   ],
