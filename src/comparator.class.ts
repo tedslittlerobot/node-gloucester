@@ -28,6 +28,10 @@ export default class GloucesterComparator {
 		return this.verbosity === 'ridiculouslyVerbose';
 	}
 
+	eq(verbosity: Verbosity) {
+		return this.verbosity === verbosity;
+	}
+
 	gt(verbosity: Verbosity) {
 		return this.level > verbosityLevels[verbosity];
 	}
