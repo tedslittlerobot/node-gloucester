@@ -4,7 +4,7 @@ import {type EnvironmentVariableSource, type Verbosity} from './types.js';
 import {environmentVariableName, getVerbosityFromEnvironmentVariables} from './utils.js';
 import GloucesterComparator from './comparator.class.js';
 
-export default class VerbosityEvaluator {
+export default class GloucesterEvaluator {
 	constructor(public verbosity: Verbosity) {}
 
 	get level(): number {
