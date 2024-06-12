@@ -15,14 +15,17 @@ export default class GloucesterEvaluator {
 		return new GloucesterComparator(this.verbosity);
 	}
 
-	setVerbosityFromEnvironmentVariable(source: EnvironmentVariableSource = defaultVariableSource) {
-		const value = getVerbosityFromEnvironmentVariables(
-			env as Record<string, string>,
-			environmentVariableName(source),
-		);
+	setVerbosityFromEnvironmentVariable(sources: EnvironmentVariableSource | EnvironmentVariableSource[] = defaultVariableSource) {
+		for (const source of Array.isArray(sources) ? sources : [sources]) {
+			const value = getVerbosityFromEnvironmentVariables(
+				env as Record<string, string>,
+				environmentVariableName(source),
+			);
 
-		if (value) {
-			this.verbosity = value;
+			if (value) {
+				this.verbosity = value;
+				return;
+			}
 		}
 	}
 

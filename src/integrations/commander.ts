@@ -2,7 +2,10 @@ import {type Command} from 'commander';
 import type GloucesterEvaluator from '../evaluator.class.js';
 
 export default function setupCommanderAndGloucester(program: Command, gloucester: GloucesterEvaluator) {
-	gloucester.setVerbosityFromEnvironmentVariable({prefix: program.name()});
+	gloucester.setVerbosityFromEnvironmentVariable([
+		{prefix: program.name()},
+		{variable: 'VERBOSITY'},
+	]);
 
 	program
 		.option('--quiet', 'Suppress output')

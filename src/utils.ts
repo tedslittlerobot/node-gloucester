@@ -7,7 +7,7 @@ export function environmentVariableName(source: EnvironmentVariableSource): stri
 	}
 
 	if ('prefix' in source) {
-		return `${source.prefix}_VERBOSITY`.toUpperCase();
+		return `${source.prefix.replace('-', '_')}_VERBOSITY`.toUpperCase();
 	}
 
 	throw new Error('Invalid environment variable name source');
